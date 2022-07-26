@@ -1,8 +1,0 @@
-<form action="<%= action %>" method="post">
-    
-    <%- include("../_dropdown.ejs", {model: event, pathName: "description"}) %>
-    <%- include("../_date_field.ejs", {model: event, pathName: "date"}) %>
-    <%- include("../_text_area.ejs", {model: event, pathName: "note"}) %>
-    <input type="submit" value="Enviar">
-
-</form>

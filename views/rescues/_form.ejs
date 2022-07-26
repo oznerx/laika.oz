@@ -1,9 +1,0 @@
-<form action="<%= action %>" method="post">
-    
-    <%- include("../_date_field.ejs", {model: rescue, pathName: "date"}) %>
-    <%- include("../_text_input.ejs", {model: rescue, pathName: "rescuers"}) %>
-    <%- include("../_dropdown.ejs", {model: rescue, pathName: "organization"}) %>
-    <%- include("../_address_field.ejs", {model: rescue.address}) %>
-    <input type="submit" value="Enviar">
-
-</form>
