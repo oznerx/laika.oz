@@ -2,7 +2,11 @@
 <html lang="es">
     <%- include("../_header.ejs", {title: "Nuevo Animal"}) %>
 <body>
-    <%- include("./_form.ejs", {action: "/animals"}) %>
-    <%- include("../_footer.ejs") %>
+    <div class="card">
+        <div class="card__Container">
+            <%- include("./_form.ejs", {action: "/animals"}) %>
+            <%- include("../_footer.ejs") %>
+        </div>
+    </div>
 </body>
 </html>

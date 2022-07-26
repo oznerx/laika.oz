@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const addressSchema = new mongoose.Schema({
   municipality: {
-    title: "Municipio",
+    title: "Municipio:",
     type: String,
     required: true,
     enum: {
@@ -28,9 +28,9 @@ const addressSchema = new mongoose.Schema({
       ],
     },
   },
-  zip_code: { title: "Código Postal", type: String },
-  neighborhood: { title: "Colonia", type: String },
-  street: { title: "Calle", type: String },
+  zip_code: { title: "Código Postal:", type: String },
+  neighborhood: { title: "Colonia:", type: String },
+  street: { title: "Calle:", type: String },
 });
 
 const Address = mongoose.model("Address", addressSchema);

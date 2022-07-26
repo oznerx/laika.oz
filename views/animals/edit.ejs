@@ -2,6 +2,10 @@
 <html lang="es">
     <%- include("../_header.ejs", {title: "Editar Animal"}) %>
 <body>
-    <%- include("./_form.ejs", {action: `/animals/${req.params.id}/update`}) %>
+    <div class="card">
+        <div class="card__Container">
+            <%- include("./_form.ejs", {action: `/animals/${req.params.id}/update`}) %>
+        </div>
+    </div>    
 </body>
 </html>

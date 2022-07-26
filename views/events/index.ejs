@@ -4,7 +4,7 @@
 <body>
 <base href="/animals/<%= req.params.animal_id %>/events/">
 
-    <a href="new">Nuevo evento</a>
+    <button><a href="new">Nuevo evento</a></button>
 
     <% if(events.length > 0) { %>
 
@@ -14,7 +14,7 @@
                 <th>Descripción</th>
                 <th>Fecha</th>
                 <th>Nota</th>
-                <th>Acción</th>
+                <th class="delete">Acción</th>
             </tr>
             </thead>
             <tbody>
@@ -23,7 +23,7 @@
                     <td><%= event.description %></td>
                     <td><%= event.date.toText() %></td>
                     <td><%= event.note %></td>
-                    <td>
+                    <td class="delete">
                         <a href="<%= event.id %>/delete">Borrar</a>
                     </td>
                 </tr>
@@ -33,23 +33,23 @@
         
     <% } else { %>
 
-        <p>No hay eventos!</p>
+        <p>¡No hay eventos!</p>
 
     <% } %>
 
-    <details>
+    <details class="delete">
         <summary>Vacunas que debería tener un gato</summary>
         <% for(const vaccine of catVaccines) { %>
             <p><%= vaccine %></p>
             <% } %>
-        </details>
+    </details>
         
-        <details>
+    <details class="delete">
         <summary>Vacunas que debería tener un perro</summary>
         <% for(const vaccine of dogVaccines) { %>
             <p><%= vaccine %></p>
         <% } %>
-      </details>
+    </details>
 
 </base>
     <%- include("../_footer.ejs") %>

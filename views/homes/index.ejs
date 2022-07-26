@@ -3,7 +3,7 @@
     <%- include("../_header.ejs", {title: "Hogares"}) %>
 <body>
 <base href="/animals/<%= req.params.animal_id %>/homes/">
-    <a href="new">Nuevo hogar</a>
+    <button><a href="new">Nuevo hogar</a></button>
 
     <% if(homes?.length > 0) { %>
 
@@ -13,7 +13,7 @@
                 <th>Tipo</th>
                 <th>Inicio</th>
                 <th>Regreso</th>
-                <th>Acción</th>
+                <th class="delete">Acción</th>
             </tr>
             </thead>
             <tbody>
@@ -22,7 +22,7 @@
                     <td><%= home.type %></td>
                     <td style="white-space: nowrap;"><%= home.start_date.toText() %></td>
                     <td style="white-space: nowrap;"><%= home.end_date?.toText() %></td>
-                    <td>
+                    <td class="delete">
                         <a href="<%= home?.id %>">Detalles</a>
                     </td>
                 </tr>
@@ -32,7 +32,7 @@
 
     <% } else { %>
 
-        <p>No hay hogares!</p>
+        <p>!No hay hogares!</p>
 
     <% } %>
 </base>

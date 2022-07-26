@@ -7,22 +7,22 @@ const { rescueSchema } = require("./rescue");
 
 const animalSchema = new mongoose.Schema({
   petco_id: {
-    title: "Petco ID",
+    title: "Petco ID:",
     type: Number,
   },
   name: {
-    title: "Nombre",
+    title: "Nombre:",
     type: String,
     required: true,
   },
-  alias: { title: "Apodo", type: String },
+  alias: { title: "Apodo:", type: String },
   birth_date: {
-    title: "Fecha de Nacimiento",
+    title: "Fecha de Nacimiento:",
     type: Date,
     required: true,
   },
   species: {
-    title: "Especie",
+    title: "Especie:",
     type: String,
     required: true,
     enum: {
@@ -30,7 +30,7 @@ const animalSchema = new mongoose.Schema({
     },
   },
   color: {
-    title: "Color",
+    title: "Color:",
     type: String,
     required: true,
     enum: {
@@ -46,7 +46,7 @@ const animalSchema = new mongoose.Schema({
     },
   },
   sex: {
-    title: "Sexo",
+    title: "Sexo:",
     type: String,
     required: true,
     enum: {
@@ -54,14 +54,14 @@ const animalSchema = new mongoose.Schema({
     },
   },
   status: {
-    title: "Estatus",
+    title: "Estatus:",
     type: String,
     required: true,
     enum: {
       values: ["Activo", "Adoptado", "Fallecido"],
     },
   },
-  particular_signs: { title: "Señas Particulares", type: String },
+  particular_signs: { title: "Señas Particulares:", type: String },
   photos: [String],
   rescue: rescueSchema,
   homes: [homeSchema],
